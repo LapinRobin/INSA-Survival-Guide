@@ -1,4 +1,11 @@
 site_name: INSA 生存指南
+site_author: LapinRobin
+
+repo_name: INSA-Survival-Guide
+repo_url: https://github.com/LapinRobin/INSA-Survival-Guide
+
+copyright: Copyright &copy; <script>document.write(new Date().getFullYear());</script> <a href="https://github.com/LapinRobin" target="_blank" rel="noopener noreferrer">LapinRobin</a>
+
 theme:
   name: material
   language: zh
@@ -24,9 +31,32 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+  
+  features:
+    - search.share
+    - search.suggest
+
+nav:
+  - 前言: "index.md"
+  - 赴法前准备: "赴法前准备.md"
+  - 生存: 
+    - 行政: "生存/行政.md"
+    - 衣食住行: "生存/衣食住行.md"
+  - 学习: 
+    - 课程概况: "学习/课程概况.md"
+    - 预备课程: "学习/预备课程.md"
+    - 专业课程: "学习/专业课程.md"
+    - 交换 | 双学位: "学习/交换|双学位.md"
+  - 实习: 
+    - 实习概况: "实习/实习概况.md"
+    - 工人实习: "实习/工人实习.md"
+    - 专业实习: "实习/专业实习.md"
+  - 生活: 
+    - 派对: "生活/派对.md"
+  - 隐藏: 
+    - 润学: "隐藏/润学.md"
+  
+  
 
 
 
-font:
-  text: Roboto
-  code: Roboto Mono
