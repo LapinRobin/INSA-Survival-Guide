@@ -36,12 +36,21 @@ theme:
     - search.share
     - search.suggest
 
+markdown_extensions:
+  - footnotes
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+
 nav:
   - 前言: "index.md"
   - 赴法前准备: "赴法前准备.md"
   - 生存: 
-    - 行政: "生存/行政.md"
+    # - 行政: "生存/行政.md"
     - 衣食住行: "生存/衣食住行.md"
+    - 个人安全: "生存/个人安全.md"
   - 学习: 
     - 课程概况: "学习/课程概况.md"
     - 预备课程: "学习/预备课程.md"
@@ -51,8 +60,8 @@ nav:
     - 实习概况: "实习/实习概况.md"
     - 工人实习: "实习/工人实习.md"
     - 专业实习: "实习/专业实习.md"
-  - 生活: 
-    - 派对: "生活/派对.md"
+  # - 生活: 
+    # - 旅行: "生活/旅行.md"
   - 隐藏: 
     - 润学: "隐藏/润学.md"
   
