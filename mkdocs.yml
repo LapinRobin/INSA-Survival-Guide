@@ -8,6 +8,7 @@ copyright: Copyright &copy; <script>document.write(new Date().getFullYear());</s
 
 theme:
   name: material
+  
   language: zh
 
   palette:
@@ -36,6 +37,8 @@ theme:
     - search.share
     - search.suggest
     - navigation.footer
+
+  custom_dir: overrides
 
    
 
