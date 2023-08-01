@@ -31,3 +31,24 @@
 
 [^1]:
     这里的 INSA 一律指 INSA 里昂校区
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="LapinRobin/INSA-Survival-Guide"
+        data-repo-id="R_kgDOJIKsDg"
+        data-category="[在此输入分类名]"
+        data-category-id="[在此输入分类 ID]"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
