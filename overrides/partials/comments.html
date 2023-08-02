@@ -1,6 +1,6 @@
 
 
-<div class="md-comments">
+
 <script src="https://giscus.app/client.js"
     data-repo="LapinRobin/INSA-Survival-Guide"
     data-repo-id="R_kgDOJIKsDg"
@@ -18,7 +18,20 @@
     async>
 </script>
 <script>
-    var palette = __get("__palette")
+    function updateTheme() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+            const theme = palette.color.scheme === "slate" ? "dark_protanopia" : "light_protanopia"
+            const frame = document.querySelector(".giscus-frame")
+            if (frame) {
+                frame.contentWindow.postMessage({
+                    giscus: { setConfig: { theme } }
+                }, "https://giscus.app")
+            }
+        }
+    }
+
+    var palette = __md_get("__palette")
     if (palette && typeof palette.color === "object") {
         if (palette.color.scheme === "slate") {
             const giscus = document.querySelector("script[src*=giscus]")
@@ -28,17 +41,12 @@
 
     document.addEventListener("DOMContentLoaded", function () {
         const ref = document.querySelector("[data-md-component=palette]")
-        ref.addEventListener("change", function () {
-            var palette = __get("__palette")
-            if (palette && typeof palette.color === "object") {
-                const theme = palette.color.scheme === "slate" ? "dark_protanopia" : "light_protanopia"
-                const frame = document.querySelector(".giscus-frame")
-                frame.contentWindow.postMessage({
-                    giscus: { setConfig: { theme } }
-                }, "https://giscus.app")
-            }
-        })
+        ref.addEventListener("change", updateTheme)
+
+        if (window.matchMedia) {
+            const mediaQueryList = window.matchMedia('(prefers-color-scheme: dark)')
+            mediaQueryList.addEventListener('change', updateTheme)
+        }
     })
 </script>
 
-</div>
